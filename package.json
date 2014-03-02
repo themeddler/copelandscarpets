@@ -1,6 +1,6 @@
 {
-  "name": "Copelands-Carpets-Website",
-  "private": true,
+ "name": "Copelands-Carpets-Website",
+ "private": true,
   "description": "Website for Copeland's Carpet built using Node and Harp.",
   "author": "Michael Medellin <michael.medellin@gmail.com>",
   "dependencies": {
