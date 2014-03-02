@@ -1,0 +1,593 @@
+/* Variables
+--------------------------------- */
+@super-light-gray: #f7f5f2;
+@light-gray: #ccc;
+@dark-gray: #666;
+
+@blue: rgb(0,160,176);
+@brown: rgb(106,74,60);
+@red: rgb(204,51,63);
+@orange: rgb(235,104,65);
+@yellow: rgb(237,201,81);
+
+/* fonts
+--------------------------------- */
+
+@font-face {
+  font-family: 'socicon';
+  src: url('../Assets/fonts/socicon-webfont.eot');
+  src: url('../Assets/fonts/socicon-webfont.eot?#iefix') format('embedded-opentype'), url('../Assets/fonts/socicon-webfont.woff') format('woff'), url('../Assets/fonts/socicon-webfont.ttf') format('truetype'), url('../Assets/fonts/socicon-webfont.svg#sociconregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.socicon {
+  font-family: 'socicon' !important;
+}
+
+.montserrat {
+  font-family: "Montserrat", "helvetica neue", "helvetica", "arial","Sans-Serif";
+}
+
+.lato {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", "Sans-Serif";
+}
+
+h1{
+  .lato;
+  font-size: 50px;
+  font-weight: 700;
+  font-style:normal;
+}
+
+h2{
+  .lato;
+  font-size: 29px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .05em;
+  color: @orange;
+  @media (max-width: 767px){
+    font-size: 25px;
+    text-align: left;
+  }
+}
+
+h3{
+  .lato;
+  font-size: 19px;
+  font-weight: 400;
+  font-style:normal;
+  color: @blue;
+}
+
+h4{
+  .lato;
+  color: @light-gray;
+  font-weight: 300;
+}
+
+h5{
+  .lato;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: .1em;
+  font-weight: 700;
+  color: @light-gray;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #ddd;
+  display: inline-block;
+}
+
+p {
+  .lato;
+  font-size: 18px;
+  font-weight: 200 ;
+  font-style: normal;
+  color: @dark-gray;
+}
+
+a.anchor{
+  display: block;
+  position: relative;
+  top: -150px;
+  visibility: hidden;
+}
+
+/* Splash Banner styles
+--------------------------------- */
+
+#splashBanner{
+    background-image: url(/Assets/img/splashfloor.jpg);
+    background-size: cover;
+    height: 800px;
+    margin: 0;
+  p{
+    float:right;
+  }
+  .intro{
+    top: 390px;
+    position: relative;
+    h1 {
+      margin: 0 0 22px 0;
+      text-align: right;
+      color: #fff;
+      line-height: 120%;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.9);
+      font-weight: 300;
+      font-size: 30px;
+      @media (max-width: 767px){
+        font-size: 20px;
+      }
+      span{
+        line-height: 55px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 50px;
+        display: block;
+        margin-bottom: 15px;
+      }
+      @media (max-width: 767px) {
+        span{
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .btn-info{
+      color: #ffffff;
+      background-color: transparent;
+      border: 2px solid @blue;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 14px 24px 15px 24px;
+      .lato
+    }
+
+    .btn-info:hover,
+    .btn-info:focus,
+    .btn-info:active,
+    .btn-info.active {
+      border-color: #fff;
+    }
+  }
+
+  @media (max-width: 767px){
+    background-image: url(/Assets/img/splashfloor-mobile.jpeg);
+    margin: 0;
+
+    #billboard{
+      top: 100px;
+    }
+  }
+}
+
+.btn-contact{
+  margin-left: 15px;
+  color: #ffffff;
+  background-color: @blue;
+  border: 2px solid @blue;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 24px 15px 24px;
+  @media (max-width: 767px){
+    margin-left: 0px;
+  }
+  .lato
+}
+
+.btn-contact:hover,
+.btn-contact:focus,
+.btn-contact:active,
+.btn-contact.active {
+  border-color: #4F9DC1;
+  background-color: #4F9DC1 ;
+  color: white;
+}
+
+
+/* Navigation Bar Styles
+---------------------------------- */
+
+.navbar {
+    min-height: 80px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .08em;
+    background: rgba(255,255,255,0.97);
+    .lato;
+}
+
+.navbar-default {
+  .navbar-brand {
+    color: #ccc;
+    .lato;
+    font-weight: 700;
+  }
+  .navbar-nav > li > a {
+    color: #aaa;
+    font-size: 13px;
+  }
+  .navbar-nav > li > a.socicon {
+    text-transform: none;
+    font-size: 25px;
+  }
+  .navbar-nav > li > a:hover{
+    color: @blue ;
+  }
+  .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus{
+    color: @blue;
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+
+
+.navbar > .container .navbar-brand  {
+  margin-left: 0;
+}
+
+.navbar-brand {
+    line-height: 80px;
+    padding: 0 15px 0 0;
+    text-transform: none;
+}
+
+.navbar-nav > li > a {
+    line-height: 80px;
+    padding: 0 5px 0 10px;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav > li > a {
+    line-height: 80px;
+    padding: 0 20px 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 60px;
+    .navbar-brand{
+      line-height: 60px;
+    }
+  }
+  .container > .navbar-header {
+    margin-left: 0;
+  }
+  .navbar-toggle{
+    margin-top: 14px;
+  }
+  .navbar-nav>li>a {
+    line-height: 60px;
+  }
+  .navbar-brand{
+    padding-left: 45px;
+  }
+}
+
+/* Marketing Section Styles
+----------------------------- */
+
+.center{
+  text-align: center;
+}
+
+.color {
+  background-color: @blue;
+  h2,p,h3{
+    color: #ffffff;
+  }
+
+}
+
+.wrap{
+  padding: 100px 0;
+  p {
+    padding-top: 10px;
+  }
+  border-bottom: 1px solid @super-light-gray;
+  @media (max-width: 767px){
+    padding: 50px 0;
+  }
+}
+
+.marketingcolumn{
+  margin: 80px 0 0 0;
+  p{
+    margin: 0 20px;
+  }
+  @media (max-width: 767px){
+    margin: 0px;
+  }
+}
+
+.wrapicon{
+  font-size: 3.5em;
+  color: white;
+  margin: 0 3px 0 3px;
+}
+
+.uncenter {
+  text-align: left;
+}
+
+.remove-spacing{
+  p {
+     padding: 0;
+     margin: 0;
+  }
+}
+
+#whoweare .row{
+  padding: 100px 0px 0px 0px;
+  p:first-of-type{
+    padding-top: 80px;
+  }
+  @media (max-width: 767px){
+    padding: 20px 0px 0px 0px;
+    p:first-of-type{
+      padding-top: 20px;
+    }
+  }
+}
+
+#location-map{
+  padding: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 5px #aaa;
+  margin-top: 60px;
+}
+
+.whydifferent{
+  h3{
+    padding-top: 20px;
+  }
+  @media (max-width: 767px){
+    h2,h3,p{
+      text-align: left;
+    }
+    p{
+      margin: 0px
+    }
+  }
+}
+
+#services{
+  padding-bottom: 0px;
+}
+
+#contact a{
+  color: white;
+}
+
+/* Services
+------------------------ */
+
+#stone{
+  h2{
+    margin-top: 2.5em;
+    @media (max-width: 767px){
+      margin-top: .5em;
+    }
+  }
+}
+
+#carpet{
+  padding-top: 0px;
+}
+
+#carpet,#wood{
+  h2{
+    margin-top: 4em;
+    @media (max-width: 767px){
+      margin-top: .5em;
+    }
+  }
+
+}
+
+#services{
+  .btn-contact{
+    margin: 20px 0 0 0;
+  }
+  img{
+    -moz-box-shadow: 5px 5px 10px #888;
+    -webkit-box-shadow:  5px 5px 10px #888;
+    box-shadow:  5px 5px 10px #888;
+  }
+}
+
+/* Testimonials
+------------------------ */
+
+.review{
+  q{
+    content: open-quote;
+    .lato;
+    font-weight: 200;
+  }
+
+  margin-top: 80px;
+}
+
+.largereview{
+
+  padding-bottom: 20px;
+//  border-bottom: 2px solid @super-light-gray;
+
+  q::after{
+    content: "" !important;
+  }
+
+  q::before{
+    font-size: 70px;
+    position: absolute;
+    left: -25px;
+    top: -20px;
+    color: #ccc;
+    font-family: "Helvetica Neue","Helvetica","Arial","SANS-SERIF";
+  }
+
+  q{
+    font-size: 20px;
+    color: @dark-gray + 10;
+  }
+  figure{
+    margin-left: 50px;
+  }
+}
+
+.smallreview{
+  q{
+    font-size: 18px;
+    color: @dark-gray;
+  }
+  h3,h4{
+    font-size: 16px;
+  }
+}
+
+.smallquote{
+  margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .smallquote{
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
+/* Product Pages
+----------------------------*/
+
+#woodBanner,#carpetBanner,#stoneBanner{
+  margin-top: 80px;
+  @media (max-width: 767px){
+    margin-top: 60px;
+  }
+  height: 300px;
+  h1 {
+    margin: 0 0 22px 0;
+    color: #fff;
+    line-height: 300px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.9);
+    font-weight: 700;
+    font-size: 50px;
+    @media (max-width: 767px){
+      line-height: 60px;
+      margin-top: 70px;
+    }
+  }
+}
+
+#woodBanner{
+  background-image: url(/Assets/img/wood\ images/woodbanner.jpg);
+  background-size: cover;
+}
+#carpetBanner{
+  background-image: url(/Assets/img/carpet\ images/carpetbanner.jpg);
+  background-size: cover;
+}
+#stoneBanner{
+  background-image: url(/Assets/img/stone\ images/stonebanner.jpg);
+  background-size: cover;
+}
+
+#brands,#description{
+  h2{
+    margin-top: 3em;
+    @media (max-width: 767px){
+      margin-top: .5em;
+    }
+  }
+  .btn-contact{
+      margin: 20px 0 0 0;
+  }
+}
+
+#description{
+  padding-top: 0px;
+}
+
+#producttestimonials{
+  q{color: white;
+  }
+}
+
+#callToAction{
+  padding: 100px 0 100px 0;
+
+  h2{
+    margin: 7px 0;
+  }
+
+  .btn-contact{
+    margin-left: 15px;
+    color: #ffffff;
+    background-color: @blue;
+    border: 2px solid @blue;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 24px 15px 24px;
+    .lato
+  }
+
+  .btn-contact:hover,
+  .btn-contact:focus,
+  .btn-contact:active,
+  .btn-contact.active {
+    border-color: #4F9DC1;
+    background-color: #4F9DC1 ;
+  }
+}
+
+#productGallery{
+  padding: 100px 0;
+  @media (max-width: 767px){
+    padding: 50px 0;
+  }
+}
+
+.productpage{
+  h2.text-center{
+    margin-top: 0px;
+  }
+  .popup-gallery{
+    margin-top: 75px;
+    a{
+      margin-right: 15px;
+    }
+    a:last-of-type{
+      margin-right: 0px;
+    }
+    img{
+      margin-top: 15px;
+    }
+    @media (max-width: 767px){
+      margin-top: 20px;
+      a{
+        margin-right: 5px;
+      }
+      img{
+        margin-top: 5px;
+        height: 90px;
+        width: 90px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
