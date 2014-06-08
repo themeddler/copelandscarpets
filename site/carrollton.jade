@@ -1,0 +1,14 @@
+extends ./JadeExtends/layout
+
+block head
+    title Carrollton Flooring | Copeland's Carpets &amp; More
+
+block content
+    include ./Jadeblocks/index/navbaralt
+    div.productpage(role="main")
+        include ./JadeBlocks/carrollton/banner
+        include ./JadeBlocks/carrollton/description
+        include ./JadeBlocks/carrollton/gallery
+        include ./JadeBlocks/carrollton/brands
+        include ./JadeBlocks/carrollton/calltoaction
+
